@@ -54,3 +54,8 @@ label{
     font-size: 0.8em;
     letter-spacing: 5px;
 }
+
+.oculto{
+    display: none;
+    
+}
