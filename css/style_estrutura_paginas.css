@@ -96,6 +96,7 @@
     display: flex;
     align-items: center;
     justify-self: center;
+    background-color: var(--cor_lnk_menu);
 }
 
 #pesquisa input{
@@ -104,7 +105,7 @@
     padding: 20px;
     border-radius: 8px;
     font-size: 2em;
-    background-color: var(--cor_lnk_menu);
+    background-color: white;
 }
 
 #cards{

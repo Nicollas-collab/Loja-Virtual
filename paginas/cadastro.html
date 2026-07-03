@@ -6,14 +6,15 @@
     <title>Loja Virtual</title>
 
     <link rel="shortcut icon" href="/imagens/icones/favecon.ico" type="image/x-icon"> <!-- favecon.ico: Para colocar logo na aba da página -->
-    <link rel="stylesheet" href="css/style_estrutura_paginas.css">
+    <link rel="stylesheet" href="../css/style_estrutura_paginas.css">
+    <link rel="stylesheet" href="../css/style_formulario.css">
 </head>
 <body>
     <main id="geral">
         <header id="cabecalho">
             <div id="logo">
-                <a href="index.html">
-                    <img src="imagens/icones/casa.png" alt="logo">
+                <a href="../index.html">
+                    <img src="../imagens/icones/casa.png" alt="logo">
                 </a>
             </div>
 
@@ -21,6 +22,7 @@
                 <ul>
                     <li><a href="index.html" class="lnk_menu"  > Home </a></li>
                     <li><a href="paginas/cadastro.html" class="lnk_menu"> Cadastro</a></li> <!-- class para ser exclusivo o design no css-->
+                    
                     <li><a href="paginas/sobre.html" class="lnk_menu"> Sobre </a></li>
                 </ul>
             </nav>
@@ -62,10 +64,10 @@
                     <input type="text" name="logradouro" id="logradouro" class="input01">
 
                     <label for="num-residencia">Número</label>
-                    <input type="text" name="logradouro" id="logradouro" class="input01">
+                    <input type="text" name="logradouro" id="logradouro" class="input02" maxlength="10" placeholder="digite o número da residencia" required>
 
                     <label for="complemento-end">complemento</label>
-                    <input type="text" name="complemento-end" id="complemento-end" class="input01">
+                    <input type="text" name="complemento-end" id="complemento-end" class="input01" maxlength="100">
 
                     <label for="bairro">Bairro</label>
                     <input type="text" name="bairro" id="bairro" class="input01">
@@ -76,11 +78,18 @@
                     <label for="uf">uf</label>
                     <input type="text" name="uf" id="uf" class="input01">
 
-
                 </div>
 
+                <label for="senha">Senha</label>
+                <input type="passq" name="senha" id="senha" class="input02" required maxlength="6" placeholder="informe a seha">
+
+                <div id="div-btns">
+                    <button type="submit" id="btn-add"> Cadastra </button>
+                    <button type="reset" id="btn-limpar">Limpar</button>
+                </div>
 
             </form>
+
         </section>
 
         <footer id="rodape">
