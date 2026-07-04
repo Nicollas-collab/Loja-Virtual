@@ -7,6 +7,7 @@
 
     <link rel="shortcut icon" href="/imagens/icones/favecon.ico" type="image/x-icon"> <!-- favecon.ico: Para colocar logo na aba da página -->
     <link rel="stylesheet" href="css/style_estrutura_paginas.css">
+    <script src="js/script_carrinho.js" defer></script>
 </head>
 <body>
     <main id="geral">
@@ -44,14 +45,26 @@
                 <h2 class="tito_card">Celular 1</h2>
 
                 <h3 class="valor_card">
-                    R$ 1,500.00
+                    R$ 4,500.00
                 </h3>
 
                 <button class="btn_card">Adicionar</button>
             </div>
 
    <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
+                <img src="imagens/images (2).jfif" alt="celular 01" class="img_card">
+
+                <h2 class="tito_card">Celular 1</h2>
+
+                <h3 class="valor_card">
+                    R$ 2,500.00
+                </h3>
+
+                <button class="btn_card">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img src="imagens/images (4).jfif" alt="celular 01" class="img_card">
 
                 <h2 class="tito_card">Celular 1</h2>
 
@@ -63,41 +76,62 @@
             </div>
 
             <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
+                <img src="imagens/images (10).jfif" alt="celular 01" class="img_card">
 
                 <h2 class="tito_card">Celular 1</h2>
 
                 <h3 class="valor_card">
-                    R$ 1,500.00
+                    R$ 7,500.00
                 </h3>
 
                 <button class="btn_card">Adicionar</button>
             </div>
 
             <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
+                <img src="imagens/images.jfif" alt="celular 01" class="img_card">
 
                 <h2 class="tito_card">Celular 1</h2>
 
                 <h3 class="valor_card">
-                    R$ 1,500.00
+                    R$ 5,000.00
                 </h3>
 
                 <button class="btn_card">Adicionar</button>
             </div>
 
-            <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
+        </section>
 
-                <h2 class="tito_card">Celular 1</h2>
-
-                <h3 class="valor_card">
-                    R$ 1,500.00
-                </h3>
-
-                <button class="btn_card">Adicionar</button>
-            </div>
-
+        <section id="carrinho">
+            <h2>Carrinho</h2>
+        
+            <div id="listaProdutos"></div>
+        
+            <p>Total dos produtos:
+                <span id="totalProdutos">R$ 0,00</span>
+            </p>
+        
+            <input
+                type="text"
+                id="cep"
+                placeholder="Digite seu CEP">
+        
+            <button id="btnFrete">
+                Calcular Frete
+            </button>
+        
+            <p>
+                Frete:
+                <span id="valorFrete">R$ 0,00</span>
+            </p>
+        
+            <h3>
+                Total:
+                <span id="valorTotal">R$ 0,00</span>
+            </h3>
+        
+            <button id="btnFinalizar">
+                Finalizar Compra
+            </button>
         </section>
 
         <footer id="rodape">
