@@ -27,22 +27,27 @@ botoes.forEach(botao => {
         );
 
         const produto = carrinho.find(p => p.nome == nome);
+const contador = card.querySelector(".contador");
 
-        if(produto){
+if(produto){
 
-            produto.quantidade++;
+    produto.quantidade++;
+    contador.textContent = produto.quantidade;
 
-        }else{
+}else{
 
-            carrinho.push({
-                nome,
-                preco,
-                quantidade:1
-            });
+    const novoProduto = {
+        nome,
+        preco,
+        quantidade: 1
+    };
 
-        }
+    carrinho.push(novoProduto);
+    contador.textContent = novoProduto.quantidade;
 
-        atualizarCarrinho();
+}
+
+atualizarCarrinho();
 
         window.location.href = "#carrinho";
     });
