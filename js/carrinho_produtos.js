@@ -2,7 +2,7 @@ import { produtos } from "./produtos.js";
 
 const section_cards = document.querySelector('#cards')
 
-const listaProdutos = () =>{
+const listarProdutos = () =>{
     section_cards.innerHTML = ''
 
     produtos.forEach((elem,i) =>{
@@ -36,7 +36,8 @@ const listaProdutos = () =>{
 
 }
 
-listarProduto()
+//filtrando as seções com a coleção map
+listarProdutos()
 
 const listarSecoes = () => {
     const secoesFiltrada = new Map()
@@ -50,12 +51,16 @@ const listarSecoes = () => {
     return secoesMenu
 
 }
-
+//montando os links
 const montarSecoes = () => {
+    //pegando o elemento do dom
     const ulMenu = document.querySelector('#menu-secoes')
-
+    //Limpando 
     listarSecoes().forEach((elem,i) => {
-        const aSecao = document.createElement('li')
+
+        const liSecao = document.createElement('li')
+        const aSecao = document.createElement('a')
+        aSecao.setAttribute('href', '#')
         aSecao.setAttribute('class', 'lnk-secao')
         aSecao.innerHTML = elem.nome_secao
 
@@ -73,4 +78,12 @@ const montarSecoes = () => {
 
 }
 
-montarSecoes
+montarSecoes()
+
+const produtosFiltrados = (idSecao) => {
+    return produtos.filter(elem => elem.id_secao === idSecao) 
+}
+
+const montandoCards = (objProdutos) =>{
+    
+} 
