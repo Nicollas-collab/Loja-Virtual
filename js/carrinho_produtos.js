@@ -37,3 +37,40 @@ const listaProdutos = () =>{
 }
 
 listarProduto()
+
+const listarSecoes = () => {
+    const secoesFiltrada = new Map()
+
+    produtos.forEach((elem,i) => {
+        secoesFiltrada.set(elem.id_secao, elem) 
+    })
+
+    const secoesMenu = Array.from(secoesFiltrada.values())
+
+    return secoesMenu
+
+}
+
+const montarSecoes = () => {
+    const ulMenu = document.querySelector('#menu-secoes')
+
+    listarSecoes().forEach((elem,i) => {
+        const aSecao = document.createElement('li')
+        aSecao.setAttribute('class', 'lnk-secao')
+        aSecao.innerHTML = elem.nome_secao
+
+        aSecao.addEventListener('click',() => {
+
+        console.log(elem.id_secao)
+
+    })
+
+    liSecao.appendChild(aSecao)
+
+    ulMenu.appendChild(liSecao)
+    })
+
+
+}
+
+montarSecoes
