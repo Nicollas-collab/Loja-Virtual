@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/imagens/icones/favecon.ico" type="image/x-icon">
     <!-- favecon.ico: Para colocar logo na aba da página -->
     <link rel="stylesheet" href="css/style_estrutura_paginas.css">
-    <script src="/js/carrinho_produtos.js" type="module" defer></script>
+    <script src="js/script_index.js" type="module" defer></script>
     
 </head>
 
@@ -43,14 +43,19 @@
 
         <nav id="nav-secoes">
             <ul id="menu-secoes">
-
-                <li><a href="#" class="lnk-secao"> tudo</a></li>
-                <li><a href="#" class="lnk-secao"> Smartphones</a></li>
-                <li><a href="#" class="lnk-secao"> Carregadores</a></li>
-                <li><a href="#" class="lnk-secao"> Capas</a></li>
-                <li><a href="#" class="lnk-secao"> Fones de Ouvido</a></li>
-                <li><a href="#" class="lnk-secao"> Películas</a></li>
-
+        
+                <li><a href="#" class="lnk-secao ativo" data-secao="Todos">Todos</a></li>
+        
+                <li><a href="#" class="lnk-secao" data-secao="Smartphones">Smartphones</a></li>
+        
+                <li><a href="#" class="lnk-secao" data-secao="Carregadores">Carregadores</a></li>
+        
+                <li><a href="#" class="lnk-secao" data-secao="Capas">Capas</a></li>
+        
+                <li><a href="#" class="lnk-secao" data-secao="Fones de Ouvido">Fones de Ouvido</a></li>
+        
+                <li><a href="#" class="lnk-secao" data-secao="Películas">Películas</a></li>
+        
             </ul>
         </nav>
 
@@ -60,73 +65,7 @@
 
         <section id="cards">
 
-            <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
-
-                <h2 class="tito_card">Celular 1</h2>
-
-                <h3 class="valor_card">
-                    R$ 1,500.00
-                </h3>
-
-                <button class="btn_card">Adicionar</button>
-            </div>
-
-            <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
-
-                <h2 class="tito_card">Celular 1</h2>
-
-                <h3 class="valor_card">
-                    R$ 1,500.00
-                </h3>
-
-                <button class="btn_card">Adicionar</button>
-            </div>
-
-            <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
-
-                <h2 class="tito_card">Celular 1</h2>
-
-                <h3 class="valor_card">
-                    R$ 1,500.00
-                </h3>
-
-                <button class="btn_card">Adicionar</button>
-            </div>
-
-            <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
-
-                <h2 class="tito_card">Celular 1</h2>
-
-                <h3 class="valor_card">
-                    R$ 1,500.00
-                </h3>
-
-                <button class="btn_card">Adicionar</button>
-            </div>
-
-            <div class="card">
-                <img src="imagens/images (1).jfif" alt="celular 01" class="img_card">
-
-                <h2 class="tito_card">Celular 1</h2>
-
-                <h3 class="valor_card">
-                    R$ 1,500.00
-                </h3>
-
-                <button class="btn_card">Adicionar</button>
-            </div>
-
-        </section>
-
-        <footer id="rodape">
-            <div id="dadosloja">
-                <h2>Rua sei la das quantas, 1001 - Centro</h2>
-                <h1>Aracaju - Sergipe</h1>
-            </div>
+            <section id="cards"></section>
 
             <div id="icones_sociais">
                 <ul>

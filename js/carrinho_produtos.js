@@ -7,10 +7,6 @@ const section_cards = document.querySelector('#cards')
 //FUNÇÃO PARA CARREGAR OS PRODUTOS
 const listarProdutos = () => {
     section_cards.innerHTML = ''
-
-
-
-
 }
 
 listarProdutos()
