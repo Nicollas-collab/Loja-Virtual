@@ -178,6 +178,7 @@ const produtos = [
         id_secao: 5,
         nome_secao: "Películas"
     },
+
 ];
 
 

@@ -29,6 +29,11 @@ const listarSecoes = () => {
     //CONVERTENDO O MAP EM ARRAY
     const secoesMenu = Array.from(secoesFiltrada.values())
 
+    secoesMenu.unshift({
+        id_secao: 'todos',
+        nome_secao: 'todos'
+    })
+
     //RETORNADO O ARRAY CONVERTIDO
     return secoesMenu
 
@@ -55,7 +60,13 @@ const montarSecoes = () => {
         //CAPTURANDO O CLICK DOS LINKS
         aSecao.addEventListener('click', () => {
             //CHAMANDO A FUNÇÃO PRODUTOS FILTRADOS
-            montandoCards(produtosFiltrados(elem.id_secao))
+
+            if(elem.id_secao === "todos"){
+                montandoCards(produtos)
+            } else{
+                montandoCards(produtosFiltrados(elem.id_secao))
+            }
+            
         })
 
         //ADICIONANDO O ELEMENTO FILHO a NO ELEMENTO li
