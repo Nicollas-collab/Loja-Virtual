@@ -81,6 +81,20 @@ const produtosFiltrados = (idSecao) => {
     return produtos.filter(elem => elem.id_secao === idSecao)
 }
 
+const inputPesquisa = document.querySelector('#pesquisa')
+
+//addEventlistener: captura eventos
+inputPesquisa.addEventListener('input', (evt) => {
+    //capturando o texto do input e deixando minusculo com o toLowerCase
+    let txtInput = evt.target.value.toLowerCase()
+
+    // filtra os dados montando os cards pelo 
+    montandoCards(produtos.filter(elem => elem.descricao_produto.toLowerCase().includes(txtInput)))
+
+
+
+})
+
 //MONTANDO CARDS
 const montandoCards = (objProdutos) => {
     section_cards.innerHTML = ''
