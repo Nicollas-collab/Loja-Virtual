@@ -1,9 +1,24 @@
 //criando o array de itens do carrinho
 const itensCarrinho = JSON.parse(localStorage.getItem('ItensSessao')) || []
 
+//criando ARROW ITEM
+const fObItem = (objProduto) => {
+    const item = {
+        id_produto: objProduto.id_produto,
+        descricao_produto:objProduto.descricao_produto,
+        caminho_da_imagem: objProduto.caminho_da_imagem,
+        valor_unitario: objProduto.valor_unitario,
+        quantidade: 1
+    }
+    return item
+}
+
+//pegando o indice do array
+console.log("índice do array >>> ",itensCarrinho.findIndex(elem => elem.id_produto == 2))
+
 //função para adicionar o item no array
 const addItem = (objItem)=>{
-    itensCarrinho.push(objItem)
+    itensCarrinho.push(fObItem(objItem))
 
     localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
 
