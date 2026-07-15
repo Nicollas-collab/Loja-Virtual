@@ -1,7 +1,9 @@
-import { listItens } from "./carrinho.js";
+import { listItens, removeItem } from "./carrinho.js";
 
 const montaTelaCarrinho = () => {
     const sectionItensCarrinho = document.querySelector('#itens-carrinho')
+
+    sectionItensCarrinho.innerHTML= ''
 
     listItens().forEach((elem,i)=>{
     const sectionItem = document.createElement ('section')
@@ -13,8 +15,24 @@ const montaTelaCarrinho = () => {
      <p class="tot-item">${elem.valor_unitario * 1}</p>
      <img src="../imagens/icones/remover.png" alt="" class="img-remover">`
     
+        const imgRemover = document.createElement('img')
+        imgRemover.setAttribute('src', 'imagens/icones/imagem de remover.png')
+        imgRemover.setAttribute('alt', 'Remover')
+        imgRemover.setAttribute('class', 'img-remover')
+
+        imgRemover.addEventListener('click',()=>{
+            alert(i)
+        })
+
+    sectionItem.appendChild(imgRemover)
+
     sectionItensCarrinho.appendChild(sectionItem)
 });
+}
+const removeItemCarrinho = (pos) =>{
+    removeItem(pos)
+
+    montaTelaCarrinho()
 }
 
 montaTelaCarrinho()
