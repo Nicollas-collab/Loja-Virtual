@@ -5,7 +5,7 @@ const produtos = [
     {
         id_produto: 1,
         descricao_produto: "Samsung Galaxy S25 Ultra",
-        caminho_da_imagem: "/imagens/produtos/samsung S25.jfif",
+        caminho_da_imagem: "imagens/produtos/samsung S25.jfif",
         valor_unitario: 7499.90,
         id_secao: 1,
         nome_secao: "Smartphones"

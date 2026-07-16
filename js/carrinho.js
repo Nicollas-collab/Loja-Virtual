@@ -24,11 +24,38 @@ const fObjItem = (objProduto) => {
 console.log("índice do array ->>> ",itensCarrinho.findIndex(elem => elem.id_produto == 12))
 
 //FUNÇÃO PARA ADCIONAR O ITEM NO ARRAY
-const addItem = (objItem) => {
-    itensCarrinho.push(fObjItem(objItem))
+const addItem = (objProduto) => {
 
-    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
-    //sessionStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
+    const indice = itensCarrinho.findIndex(
+        item => item.id_produto === objProduto.id_produto
+    );
+
+    if (indice >= 0) {
+        itensCarrinho[indice].quantidade++;
+    } else {
+        itensCarrinho.push(fObjItem(objProduto));
+    }
+
+    localStorage.setItem(
+        "itensSessao",
+        JSON.stringify(itensCarrinho)
+    );
+}
+
+const alterarQuantidade = (posicao, quantidade) => {
+
+    quantidade = parseInt(quantidade);
+
+    if (quantidade < 1 || !quantidade) {
+        quantidade = 1;
+    }
+
+    itensCarrinho[posicao].quantidade = quantidade;
+
+    localStorage.setItem(
+        "itensSessao",
+        JSON.stringify(itensCarrinho)
+    );
 }
 
 //LISTAR ITENS DO CARRINHO
@@ -51,7 +78,7 @@ const removeItem = (pos) => {
 }
 
 
-export { addItem, listItens, removeItem }
+export { addItem, listItens, removeItem, alterarQuantidade }
 
 
 

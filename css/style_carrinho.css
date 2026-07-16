@@ -1,0 +1,165 @@
+/* ==========================
+   LAYOUT
+========================== */
+
+#cards{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+    padding:20px;
+}
+
+#itens-carrinho{
+    width:72%;
+}
+
+#carrinho{
+    width:270px;
+    background:#eef5ff;
+    border:2px solid #1d4ed8;
+    border-radius:10px;
+    padding:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+/* ==========================
+   PRODUTOS
+========================== */
+
+.card{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    background:white;
+    margin-bottom:15px;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.img_card{
+    width:70px;
+    height:70px;
+    border-radius:8px;
+    object-fit:cover;
+}
+
+.tito_card{
+    flex:1;
+    font-size:18px;
+    color:#1e293b;
+}
+
+.valor_card{
+    color:#2563eb;
+    font-weight:bold;
+    font-size:17px;
+}
+
+.contador{
+    width:40px;
+    height:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid #94a3b8;
+    border-radius:5px;
+    background:#f8fafc;
+}
+
+.btn_card{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn_card:hover{
+    background:#1d4ed8;
+}
+
+/* ==========================
+   CARRINHO
+========================== */
+
+#carrinho h2{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:12px;
+    border-radius:6px;
+    margin-bottom:20px;
+}
+
+#carrinho input{
+    width:100%;
+    padding:10px;
+    border:1px solid #93c5fd;
+    border-radius:6px;
+    margin:10px 0;
+}
+
+#carrinho p,
+#carrinho h3{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+    font-size:16px;
+}
+
+#btnFrete{
+    width:100%;
+    padding:12px;
+    background:#3b82f6;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-bottom:15px;
+}
+
+#btnFrete:hover{
+    background:#2563eb;
+}
+
+#btnFinalizar{
+    width:100%;
+    padding:14px;
+    background:#f97316;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#btnFinalizar:hover{
+    background:#ea580c;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    #cards{
+        flex-direction:column;
+    }
+
+    #itens-carrinho,
+    #carrinho{
+        width:100%;
+    }
+
+}
+
+.img-remover{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    cursor: pointer;
+}
