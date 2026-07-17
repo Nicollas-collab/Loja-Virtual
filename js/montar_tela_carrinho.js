@@ -42,7 +42,7 @@ const montaTelaCarrinho = () => {
     <p class='vlr-unitario'>${elem.valor_unitario.toFixed(2)}</p> 
     <input type="number" min="1" step="1" name='quant${i}' id='quant${i}' class="input-item" value="${elem.quantidade}">
      <p class="tot-item">${(elem.valor_unitario * elem.quantidade.toFixed(2)).toFixed(2)}</p>
-     <img src="imagens/icones/imagem de remover.png" alt="" class="img-remover">`
+     <img src="imagens/icones/imagem de remover.png" alt="" class="img-remover">`;
     
      const inputQuantidade = sectionItem.querySelector(".input-item");
 
@@ -71,11 +71,15 @@ const montaTelaCarrinho = () => {
 
     sectionItensCarrinho.appendChild(sectionItem)
 });
+
+
 }
+
 const removerItemCarrinho = (pos) =>{
     removeItem(pos)
 
     montaTelaCarrinho()
+    
 }
 
 montaTelaCarrinho()

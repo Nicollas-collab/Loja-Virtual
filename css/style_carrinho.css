@@ -163,3 +163,63 @@
     object-fit: contain;
     cursor: pointer;
 }
+
+/* Cada produto do carrinho */
+.item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Imagem do produto */
+.item img:first-child{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+/* Nome do produto */
+.descricao{
+    width: 250px;
+    font-weight: bold;
+}
+
+/* Valor unitário */
+.vlr-unitario{
+    width: 120px;
+    text-align: center;
+}
+
+/* Campo quantidade */
+.input-item{
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Total do item */
+.tot-item{
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}
+
+/* Botão remover */
+.img-remover{
+    width: 30px !important;
+    height: 30px !important;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.img-remover:hover{
+    transform: scale(1.1);
+}
