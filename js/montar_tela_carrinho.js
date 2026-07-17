@@ -41,7 +41,7 @@ const montaTelaCarrinho = () => {
     <p class='descricao'>${elem.descricao_produto}</p> 
     <p class='vlr-unitario'>${elem.valor_unitario.toFixed(2)}</p> 
     <input type="number" min="1" step="1" name='quant${i}' id='quant${i}' class="input-item" value="${elem.quantidade}">
-     <p class="tot-item">${(elem.valor_unitario * elem.quantidade.toFixed(2)).toFixed(2)}</p>
+     <p class="tot-item">${(elem.valor_unitario * elem.quantidade.toFixed(2))}</p>
      <img src="imagens/icones/imagem de remover.png" alt="" class="img-remover">`;
     
      const inputQuantidade = sectionItem.querySelector(".input-item");
@@ -75,13 +75,37 @@ const montaTelaCarrinho = () => {
 
 }
 
-const removerItemCarrinho = (pos) =>{
-    removeItem(pos)
+const removerItemCarrinho = (pos) => {
 
-    montaTelaCarrinho()
-    
+    removeItem(pos);
+
+    montaTelaCarrinho();
+
+    calcularTotal();
+
 }
 
 montaTelaCarrinho()
 
 calcularTotal();
+
+const btnFinalizar = document.querySelector("#btnFinalizar");
+
+btnFinalizar.addEventListener("click", () => {
+
+    if (listItens().length === 0) {
+        alert("Seu carrinho está vazio.");
+        return;
+    }
+
+    alert("Compra finalizada com sucesso!");
+
+    localStorage.removeItem("itensSessao");
+
+    montaTelaCarrinho();
+
+    document.querySelector("#totalProdutos").innerHTML = "R$ 0,00";
+    document.querySelector("#valorFrete").innerHTML = "R$ 0,00";
+    document.querySelector("#valorTotal").innerHTML = "R$ 0,00";
+
+});
