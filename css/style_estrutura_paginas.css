@@ -187,3 +187,30 @@ justify-content: center;
     width: 25px;
     height: 25px;
 }
+#nav-secoes{
+    width: 100%;
+    min-height: 80px;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lnk-secao:link, .lnk-secao:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    color: var(--cor_vermelha);
+}
+
+.lnk-secao:hover {
+    font-size: 1.5em;
+    color: var(--cor_vermelha);
+}
+
+.lnk-secao:active {
+    color: var(--cor_principal);
+}
+
